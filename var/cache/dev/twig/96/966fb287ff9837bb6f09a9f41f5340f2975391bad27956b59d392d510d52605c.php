@@ -65,7 +65,7 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello HomeController!";
+        echo "Accueil";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,29 +85,26 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        echo "<!-- ======= Hero Section ======= -->
+  <section id=\"hero\" class=\"d-flex align-items-center\">
+    <div class=\"container position-relative text-center text-lg-start\" data-aos=\"zoom-in\" data-aos-delay=\"100\">
+      <div class=\"row\">
+        <div class=\"col-lg-8\">
+          <h1>Welcome to <span>Restaurantly</span></h1>
+          <h2>Delivering great food for more than 18 years!</h2>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+          <div class=\"btns\">
+            <a href=\"#menu\" class=\"btn-menu animated fadeInUp scrollto\">Our Menu</a>
+            <a href=\"#book-a-table\" class=\"btn-book animated fadeInUp scrollto\">Book a Table</a>
+          </div>
+        </div>
+        <div class=\"col-lg-4 d-flex align-items-center justify-content-center position-relative\" data-aos=\"zoom-in\" data-aos-delay=\"200\">
+          <a href=\"https://www.youtube.com/watch?v=GlrxcuEDyF8\" class=\"glightbox play-btn\"></a>
+        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/Travaux personnel/site/Ecommerce/ecommerce_1/src/Controller/HomeController.php", 0), "html", null, true);
-        echo "\">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/Travaux personnel/site/Ecommerce/ecommerce_1/templates/home/index.html.twig", 0), "html", null, true);
-        echo "\">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -129,30 +126,36 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<!-- ======= Hero Section ======= -->
+  <section id=\"hero\" class=\"d-flex align-items-center\">
+    <div class=\"container position-relative text-center text-lg-start\" data-aos=\"zoom-in\" data-aos-delay=\"100\">
+      <div class=\"row\">
+        <div class=\"col-lg-8\">
+          <h1>Welcome to <span>Restaurantly</span></h1>
+          <h2>Delivering great food for more than 18 years!</h2>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+          <div class=\"btns\">
+            <a href=\"#menu\" class=\"btn-menu animated fadeInUp scrollto\">Our Menu</a>
+            <a href=\"#book-a-table\" class=\"btn-book animated fadeInUp scrollto\">Book a Table</a>
+          </div>
+        </div>
+        <div class=\"col-lg-4 d-flex align-items-center justify-content-center position-relative\" data-aos=\"zoom-in\" data-aos-delay=\"200\">
+          <a href=\"https://www.youtube.com/watch?v=GlrxcuEDyF8\" class=\"glightbox play-btn\"></a>
+        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ 'C:/xampp/htdocs/Travaux personnel/site/Ecommerce/ecommerce_1/src/Controller/HomeController.php'|file_link(0) }}\">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/xampp/htdocs/Travaux personnel/site/Ecommerce/ecommerce_1/templates/home/index.html.twig'|file_link(0) }}\">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
 {% endblock %}
 ", "home/index.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\templates\\home\\index.html.twig");
     }
