@@ -710,6 +710,6 @@ class __TwigTemplate_0ffd5c20c9d9c6a142fa5e03fff830b6abc1c137a7c0da355deafd9325d
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "C:\\xampp\\htdocs\\symfony\\siteEcommerce\\commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
     }
 }

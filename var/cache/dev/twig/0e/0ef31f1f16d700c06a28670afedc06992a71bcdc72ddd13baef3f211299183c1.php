@@ -168,6 +168,6 @@ class __TwigTemplate_0e89153a94d8a90be3492c2fc019a7dcb9c508457b6c5893a6e4e6c6db5
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "C:\\xampp\\htdocs\\symfony\\siteEcommerce\\commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
     }
 }

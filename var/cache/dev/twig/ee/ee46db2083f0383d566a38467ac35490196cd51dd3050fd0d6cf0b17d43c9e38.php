@@ -122,6 +122,6 @@ class __TwigTemplate_7b7484ea366a875a28bee6dc7daa7b7e429e4afc81d668b1b4735984772
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/table.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\table.html.twig");
+", "@WebProfiler/Profiler/table.html.twig", "C:\\xampp\\htdocs\\symfony\\siteEcommerce\\commerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\table.html.twig");
     }
 }

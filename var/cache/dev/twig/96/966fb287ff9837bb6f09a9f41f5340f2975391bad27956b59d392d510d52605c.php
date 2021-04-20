@@ -154,6 +154,6 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
     </ul>
 </div>
 {% endblock %}
-", "home/index.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\xampp\\htdocs\\symfony\\siteEcommerce\\commerce\\templates\\home\\index.html.twig");
     }
 }

@@ -191,6 +191,6 @@ class __TwigTemplate_9bc1418ffea1253125f09f17ec45a59d53ae02309454dc85b3c58904d42
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\Travaux personnel\\site\\Ecommerce\\ecommerce_1\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\symfony\\siteEcommerce\\commerce\\templates\\base.html.twig");
     }
 }
