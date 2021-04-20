@@ -1,8 +1,15 @@
 d17909,::1,GET,http://localhost:8000/home,1618927598,,200
 df6ba4,::1,GET,http://localhost:8000/home,1618927651,,200
 834749,::1,GET,http://localhost:8000/,1618927683,,200
+
 3a25a7,::1,GET,http://localhost:8000/,1618935247,,200
 06abe7,::1,GET,http://localhost:8000/favicon.ico,1618935258,e6cac9,404
 e6cac9,::1,GET,http://localhost:8000/favicon.ico,1618935258,,404
 1cc413,::1,GET,http://localhost:8000/,1618935586,,200
 c7c604,::1,GET,http://localhost:8000/,1618937462,,200
+
+
+2adcf3,127.0.0.1,GET,"http://localhost:8000/favicon.ico,1618935258,e6cac9,404",1618937673,3ab373,404
+3ab373,127.0.0.1,GET,"http://localhost:8000/favicon.ico,1618935258,e6cac9,404",1618937673,,404
+3d68b2,127.0.0.1,GET,"http://localhost:8000/favicon.ico,1618935258,,404",1618937675,c61d3a,404
+c61d3a,127.0.0.1,GET,"http://localhost:8000/favicon.ico,1618935258,,404",1618937675,,404
