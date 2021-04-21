@@ -22,5 +22,9 @@ return [
     'galerie' => [[], ['_controller' => 'App\\Controller\\GalerieController::index'], [], [['text', '/galerie']], [], []],
     'accueil' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
     'produits' => [[], ['_controller' => 'App\\Controller\\ProductController::index'], [], [['text', '/produits']], [], []],
+    'author_users' => [[], ['_controller' => 'App\\Controller\\RegisterController::index'], [], [['text', '/admin/gestionUsers']], [], []],
+    'inscription' => [[], ['_controller' => 'App\\Controller\\RegisterController::register'], [], [['text', '/secu']], [], []],
     'reservation' => [[], ['_controller' => 'App\\Controller\\ReservationController::index'], [], [['text', '/reservation']], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/connexion']], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
 ];

@@ -10,20 +10,22 @@
           <li><a class="nav-link scrollto" href="{{path("accueil")}}">Accueil</a></li>
           <li><a class="nav-link scrollto" href="{{path("nous")}}">Présentation</a></li>
           <li><a class="nav-link scrollto" href="{{path("produits")}}">Menu</a></li>
-          <li><a class="nav-link scrollto" href="{{path("evenement")}}">Evenements</a></li>
-          <li><a class="nav-link scrollto" href="{{path("chef")}}">Nos chefs</a></li>
-          <li><a class="nav-link scrollto" href="{{path("galerie")}}">Notre galleries</a></li>
+          <li><a class="nav-link scrollto" href="{{path("evenement")}}">Evenement</a></li>
+          <li><a class="nav-link scrollto" href="{{path("chef")}}">Chefs</a></li>
+          <li><a class="nav-link scrollto" href="{{path("galerie")}}">Notre gallerie</a></li>
           <li><a class="nav-link scrollto" href="{{path("contact")}}">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown "><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Deconnexion</a></li>
+              <li><a href="{{path("app_logout")}}">Deconnexion</a></li>
             </ul>
           </li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      <a href="{{path("inscription")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Inscription</a>
+            <a href="{{path("app_login")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Connexion</a>
       <a href="{{path("reservation")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Reservation</a>
 
     </div>

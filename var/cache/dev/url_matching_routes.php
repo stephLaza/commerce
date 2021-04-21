@@ -20,7 +20,11 @@ return [
         '/galerie' => [[['_route' => 'galerie', '_controller' => 'App\\Controller\\GalerieController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/produits' => [[['_route' => 'produits', '_controller' => 'App\\Controller\\ProductController::index'], null, null, null, false, false, null]],
+        '/admin/gestionUsers' => [[['_route' => 'author_users', '_controller' => 'App\\Controller\\RegisterController::index'], null, null, null, false, false, null]],
+        '/secu' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\RegisterController::register'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\ReservationController::index'], null, null, null, false, false, null]],
+        '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
