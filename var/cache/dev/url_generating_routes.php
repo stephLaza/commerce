@@ -16,7 +16,11 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'nous' => [[], ['_controller' => 'App\\Controller\\AboutController::index'], [], [['text', '/nous']], [], []],
+    'chef' => [[], ['_controller' => 'App\\Controller\\ChefController::index'], [], [['text', '/chef']], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'evenement' => [[], ['_controller' => 'App\\Controller\\EventController::index'], [], [['text', '/evenements']], [], []],
+    'galerie' => [[], ['_controller' => 'App\\Controller\\GalerieController::index'], [], [['text', '/galerie']], [], []],
     'accueil' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
     'produits' => [[], ['_controller' => 'App\\Controller\\ProductController::index'], [], [['text', '/produits']], [], []],
+    'reservation' => [[], ['_controller' => 'App\\Controller\\ReservationController::index'], [], [['text', '/reservation']], [], []],
 ];

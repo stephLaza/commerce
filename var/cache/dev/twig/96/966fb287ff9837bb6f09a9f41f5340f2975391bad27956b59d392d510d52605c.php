@@ -90,12 +90,18 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
     <div class=\"container position-relative text-center text-lg-start\" data-aos=\"zoom-in\" data-aos-delay=\"100\">
       <div class=\"row\">
         <div class=\"col-lg-8\">
-          <h1>Welcome to <span>Restaurantly</span></h1>
+          <h1>Bienvenue <span>Restaurante</span></h1>
           <h2>Delivering great food for more than 18 years!</h2>
 
           <div class=\"btns\">
-            <a href=\"#menu\" class=\"btn-menu animated fadeInUp scrollto\">Our Menu</a>
-            <a href=\"#book-a-table\" class=\"btn-book animated fadeInUp scrollto\">Book a Table</a>
+            <a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produits");
+        echo "\" class=\"btn-menu animated fadeInUp scrollto\">Menu</a>
+            <a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation");
+        echo "\" class=\"btn-book animated fadeInUp scrollto\">Reservation</a>
           </div>
         </div>
         <div class=\"col-lg-4 d-flex align-items-center justify-content-center position-relative\" data-aos=\"zoom-in\" data-aos-delay=\"200\">
@@ -126,7 +132,7 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -141,12 +147,12 @@ class __TwigTemplate_0a570c4ef7ceb82d03e813cee7144cab168d0afe5aade13710dbc28c5d7
     <div class=\"container position-relative text-center text-lg-start\" data-aos=\"zoom-in\" data-aos-delay=\"100\">
       <div class=\"row\">
         <div class=\"col-lg-8\">
-          <h1>Welcome to <span>Restaurantly</span></h1>
+          <h1>Bienvenue <span>Restaurante</span></h1>
           <h2>Delivering great food for more than 18 years!</h2>
 
           <div class=\"btns\">
-            <a href=\"#menu\" class=\"btn-menu animated fadeInUp scrollto\">Our Menu</a>
-            <a href=\"#book-a-table\" class=\"btn-book animated fadeInUp scrollto\">Book a Table</a>
+            <a href=\"{{path(\"produits\")}}\" class=\"btn-menu animated fadeInUp scrollto\">Menu</a>
+            <a href=\"{{path(\"reservation\")}}\" class=\"btn-book animated fadeInUp scrollto\">Reservation</a>
           </div>
         </div>
         <div class=\"col-lg-4 d-flex align-items-center justify-content-center position-relative\" data-aos=\"zoom-in\" data-aos-delay=\"200\">
