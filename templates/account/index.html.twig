@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte
+{% endblock %}
+
+{% block body %}
+	<section id="events" class="events m100">
+		<div class="container" data-aos="fade-up">
+
+			<div class="">
+				<h2>Mon compte</h2>
+				<p>Bienvenue
+					{{ app.user.firstname}}
+					dans votre compte. C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.</p>
+			</div>
+
+			<div id="account">
+				<div class="account-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 col-md-6 account-links">
+								<h4 class="mb-5">Vos options:</h4>
+								<ul>
+									<li>
+										<i class="bx bx-chevron-right"></i>
+										<a class="nav-link " href="{{path("account_password")}}">Modifier mot de passe.</a>
+									</li>
+									<li>
+										<i class="bx bx-chevron-right"></i>
+										<a class="nav-link " href="{{path("account_password")}}">Vos commandes</a>
+									</li>
+                  <li>
+										<i class="bx bx-chevron-right"></i>
+										<a class="nav-link " href="{{path("account_password")}}">Votre Adresse</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End account -->
+
+
+		</div>
+	</section>
+
+	<!-- End Events Section -->
+</main>{% endblock %}

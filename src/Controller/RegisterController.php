@@ -19,16 +19,7 @@ class RegisterController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    /**
-     * @Route("/admin/gestionUsers", name="author_users")
-     */
-    public function index(UserRepository $repository)
-    {
-        $users = $repository->findAll();
-        return $this->render('admin_secu/index.html.twig', [
-            "users" => $users,
-        ]);
-    }
+    
     /**
      * @Route("/secu", name="inscription")
      */
