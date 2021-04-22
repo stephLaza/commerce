@@ -16,6 +16,7 @@ return [
         '/nous' => [[['_route' => 'nous', '_controller' => 'App\\Controller\\AboutController::index'], null, null, null, false, false, null]],
         '/compte' => [[['_route' => 'account', '_controller' => 'App\\Controller\\AccountController::index'], null, null, null, false, false, null]],
         '/compte/modifmdp' => [[['_route' => 'account_password', '_controller' => 'App\\Controller\\AccountPasswordController::index'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/chef' => [[['_route' => 'chef', '_controller' => 'App\\Controller\\ChefController::index'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/evenements' => [[['_route' => 'evenement', '_controller' => 'App\\Controller\\EventController::index'], null, null, null, false, false, null]],

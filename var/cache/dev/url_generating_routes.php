@@ -18,6 +18,7 @@ return [
     'nous' => [[], ['_controller' => 'App\\Controller\\AboutController::index'], [], [['text', '/nous']], [], []],
     'account' => [[], ['_controller' => 'App\\Controller\\AccountController::index'], [], [['text', '/compte']], [], []],
     'account_password' => [[], ['_controller' => 'App\\Controller\\AccountPasswordController::index'], [], [['text', '/compte/modifmdp']], [], []],
+    'admin' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::index'], [], [['text', '/admin']], [], []],
     'chef' => [[], ['_controller' => 'App\\Controller\\ChefController::index'], [], [['text', '/chef']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'evenement' => [[], ['_controller' => 'App\\Controller\\EventController::index'], [], [['text', '/evenements']], [], []],
