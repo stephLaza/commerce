@@ -17,6 +17,7 @@ class ReservationController extends AbstractController
      */
     public function index(Request $request, MailerInterface $mailer)
     {
+        
         $formContact = $this->createForm(ReservationType::class, null);
         $formContact->handleRequest($request);
 

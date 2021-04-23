@@ -6306,13 +6306,19 @@
         <argument key="mailer" type="service" id="mailer.mailer"/>
       </argument>
     </service>
+    <service id=".service_locator.IrXwkls" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repository" type="service" id="App\Repository\ProductRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.UDgw6Ol" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator._NdY3_0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.P2CtoS5" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountPasswordController::index" type="service" id=".service_locator.gPh6X_L"/>
@@ -6378,6 +6384,7 @@
         <argument key="App\Controller\Admin\UserCrudController::renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\UserCrudController::updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.CpaXrFh"/>
+        <argument key="App\Controller\ProductController::index" type="service" id=".service_locator.IrXwkls"/>
         <argument key="App\Controller\RegisterController::register" type="service" id=".service_locator.gPh6X_L"/>
         <argument key="App\Controller\ReservationController::index" type="service" id=".service_locator.CpaXrFh"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.UDgw6Ol"/>
@@ -6450,6 +6457,7 @@
         <argument key="App\Controller\Admin\UserCrudController:renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\UserCrudController:updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\ContactController:index" type="service" id=".service_locator.CpaXrFh"/>
+        <argument key="App\Controller\ProductController:index" type="service" id=".service_locator.IrXwkls"/>
         <argument key="App\Controller\RegisterController:register" type="service" id=".service_locator.gPh6X_L"/>
         <argument key="App\Controller\ReservationController:index" type="service" id=".service_locator.CpaXrFh"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.UDgw6Ol"/>
@@ -7104,12 +7112,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Provider\AdminContextProvider"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator._NdY3_0"/>
+      <argument type="service" id=".service_locator.P2CtoS5"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator._NdY3_0"/>
+      <argument type="service" id=".service_locator.P2CtoS5"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7545,7 +7553,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._NdY3_0"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.P2CtoS5"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.Hllcktv"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
