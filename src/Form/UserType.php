@@ -67,9 +67,10 @@ class UserType extends AbstractType
                     'placeholder' => 'Merci de confirmer votre mot de passe.'
                 ]]
             ])
-
             ->add('submit', SubmitType::class, [
-                'label' => 'Valider'
+                'label' => 'Valider',
+                'attr' => ['class' => 'book-a-table-btn'],
+                
             ]);
     }
 

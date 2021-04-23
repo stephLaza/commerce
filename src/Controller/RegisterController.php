@@ -34,7 +34,7 @@ class RegisterController extends AbstractController
             $user->setPassword($password);
             $this->entityManager->persist($user);
             $this->entityManager->flush();
-            return $this->redirectToRoute("author_users");
+            return $this->redirectToRoute("account");
         }
         return $this->render('admin_secu/register.html.twig', [
             'form' => $form->createView()
