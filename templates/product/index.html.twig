@@ -22,7 +22,7 @@
 							<li data-filter=".filter-starters">Entrées</li>
 							<li data-filter=".filter-salads">Salades</li>
 							<li data-filter=".filter-specialty">Plats</li>
-              <li data-filter=".filter-desserts">Desserts</li>
+							<li data-filter=".filter-desserts">Desserts</li>
 						</ul>
 					</div>
 				</div>
@@ -34,10 +34,14 @@
 							<img src="{{asset('uploads/' ~ entree.image)}}" class="menu-img" alt="{{entree.name}}">
 							<div class="menu-content">
 								<a href="#">{{entree.name}}</a>
-								<span>{{ (entree.price / 100)|number_format(2, ',','.')}} €</span>
+								<span>{{ (entree.price / 100)|number_format(2, ',','.')}}
+									€</span>
 							</div>
 							<div class="menu-ingredients">
 								{{entree.description}}
+							</div>
+							<div class="d-flex justify-content-end mt-2">
+								<a href="{{ path('add_to_cart', {'id' : entree.id}) }}" class="book-a-table-btn btn">click and collect</a>
 							</div>
 						</div>
 
@@ -48,41 +52,53 @@
 							<img src="{{asset('uploads/' ~ salade.image)}}" class="menu-img" alt="{{salade.name}}">
 							<div class="menu-content">
 								<a href="#">{{salade.name}}</a>
-								<span>{{ (salade.price / 100)|number_format(2, ',','.')}} €</span>
+								<span>{{ (salade.price / 100)|number_format(2, ',','.')}}
+									€</span>
 							</div>
 							<div class="menu-ingredients">
-							{{salade.description}}
+								{{salade.description}}
+							</div>
+							<div class="d-flex justify-content-end mt-2">
+								<a href="{{ path('add_to_cart', {'id' : salade.id}) }}" class="book-a-table-btn btn">click and collect</a>
 							</div>
 						</div>
 
 					{% endfor %}
 
 					{% for plat in plats %}
-					<div class="col-lg-6 menu-item filter-specialty">
-						<img src="{{asset('uploads/' ~ plat.image)}}" class="menu-img" alt="{{plat.name}}">
-						<div class="menu-content">
-							<a href="#">{{plat.name}}</a>
-								<span>{{ (plat.price / 100)|number_format(2, ',','.')}} €</span>
+						<div class="col-lg-6 menu-item filter-specialty">
+							<img src="{{asset('uploads/' ~ plat.image)}}" class="menu-img" alt="{{plat.name}}">
+							<div class="menu-content">
+								<a href="#">{{plat.name}}</a>
+								<span>{{ (plat.price / 100)|number_format(2, ',','.')}}
+									€</span>
+							</div>
+							<div class="menu-ingredients">
+								{{plat.description}}
+							</div>
+							<div class="d-flex justify-content-end mt-2">
+								<a href="{{ path('add_to_cart', {'id' : plat.id}) }}" class="book-a-table-btn btn">click and collect</a>
+							</div>
 						</div>
-						<div class="menu-ingredients">
-						{{plat.description}}
-						</div>
-					</div>
-		{% endfor %}
+					{% endfor %}
 					{% for dessert in desserts %}
-					<div class="col-lg-6 menu-item filter-desserts">
-						<img src="{{asset('uploads/' ~ dessert.image)}}" class="menu-img" alt="{{dessert.name}}">
-						<div class="menu-content">
+						<div class="col-lg-6 menu-item filter-desserts">
+							<img src="{{asset('uploads/' ~ dessert.image)}}" class="menu-img" alt="{{dessert.name}}">
+							<div class="menu-content">
 								<a href="#">{{dessert.name}}</a>
-								<span>{{ (dessert.price / 100)|number_format(2, ',','.')}} €</span>
+								<span>{{ (dessert.price / 100)|number_format(2, ',','.')}}
+									€</span>
+							</div>
+							<div class="menu-ingredients">
+								{{dessert.description}}
+							</div>
+							<div class="d-flex justify-content-end mt-2">
+								<a href="{{ path('add_to_cart', {'id' : dessert.id}) }}" class="book-a-table-btn btn">click and collect</a>
+							</div>
+
 						</div>
-						<div class="menu-ingredients">
-							{{dessert.description}}
-						</div>
-					</div>
-		{% endfor %}
-					
-					
+					{% endfor %}
+
 
 				</div>
 

@@ -1838,5 +1838,19 @@ section {
   color: #cda45e;
 }
 
+.panier .panier-img {
+  width: 70px;
+  border-radius: 50%;
+  float: left;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+.size-icon-18{
+  height: 18px;
+  width: auto;
+}
 
+.size-icon-14{
+  height: 14px;
+  width: auto;
+}
 

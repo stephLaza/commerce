@@ -1,31 +1,55 @@
 <header id="header" class="fixed-top d-flex align-items-cente">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+	<div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="{{path("accueil")}}">Restaurante</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+		<h1 class="logo me-auto me-lg-0">
+			<a href="{{path("accueil")}}">Restaurante</a>
+		</h1>
+		<!-- Uncomment below if you prefer to use an image logo -->
+		<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="{{path("accueil")}}">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="{{path("nous")}}">Présentation</a></li>
-          <li><a class="nav-link scrollto" href="{{path("produits")}}">Notre cartes</a></li>
-          <li><a class="nav-link scrollto" href="{{path("evenement")}}">Evenements</a></li>
-          <li><a class="nav-link scrollto" href="{{path("chef")}}">Notre équipe</a></li>
-          <li><a class="nav-link scrollto" href="{{path("galerie")}}">Notre gallerie</a></li>
-          <li><a class="nav-link scrollto" href="{{path("contact")}}">Contact</a></li>
-          <li class="dropdown "><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{{path("admin")}}" target="_blank">Dashboard</a></li>
-              <li><a href="{{path("app_logout")}}">Deconnexion</a></li>
-            </ul>
-          </li>
+		<nav id="navbar" class="navbar order-last order-lg-0">
+			<ul>
+				<li>
+					<a class="nav-link scrollto" href="{{path("accueil")}}">Accueil</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("nous")}}">Présentation</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("produits")}}">Notre cartes</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("evenement")}}">Evenements</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("chef")}}">Notre équipe</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("galerie")}}">Notre gallerie</a>
+				</li>
+				<li>
+					<a class="nav-link scrollto" href="{{path("contact")}}">Contact</a>
+				</li>
+				<li class="dropdown ">
+					<a href="#">
+						<span>Admin</span>
+						<i class="bi bi-chevron-down"></i>
+					</a>
+					<ul>
+						<li><a href="{{path("admin")}}" target="_blank">Dashboard</a></li>
+						<li><a href="{{path("app_logout")}}">Deconnexion</a></li>
+					</ul>
+				</li>
 
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      
-      <a href="{{path("reservation")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Reservation</a>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav>
+		<!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->
+		<a href="{{path("reservation")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Reservation</a>
+		<a href="{{path("panier")}}" class="book-a-table-btn scrollto d-none d-lg-flex">Panier 
+		<img src="{{asset('assets/img/cartsw.png')}}" class="size-icon-18" alt="cart">
+		</a>
+	</div>
+</header>
+<!-- End Header -->
