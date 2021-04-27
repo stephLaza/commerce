@@ -14,6 +14,8 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/nous' => [[['_route' => 'nous', '_controller' => 'App\\Controller\\AboutController::index'], null, null, null, false, false, null]],
+        '/compte/adresses' => [[['_route' => 'account_address', '_controller' => 'App\\Controller\\AccountAddressController::index'], null, null, null, false, false, null]],
+        '/compte/ajouter-une-adresse' => [[['_route' => 'add_address', '_controller' => 'App\\Controller\\AccountAddressController::add'], null, null, null, false, false, null]],
         '/compte' => [[['_route' => 'account', '_controller' => 'App\\Controller\\AccountController::index'], null, null, null, false, false, null]],
         '/compte/modifmdp' => [[['_route' => 'account_password', '_controller' => 'App\\Controller\\AccountPasswordController::index'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
@@ -47,11 +49,17 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/cart/(?'
-                    .'|add/([^/]++)(*:190)'
-                    .'|de(?'
-                        .'|lete/([^/]++)(*:216)'
-                        .'|crease/([^/]++)(*:239)'
+                .'|/c(?'
+                    .'|ompte/(?'
+                        .'|modifier\\-une\\-adresse/([^/]++)(*:214)'
+                        .'|supprimer\\-une\\-adresse/([^/]++)(*:254)'
+                    .')'
+                    .'|art/(?'
+                        .'|add/([^/]++)(*:282)'
+                        .'|de(?'
+                            .'|lete/([^/]++)(*:308)'
+                            .'|crease/([^/]++)(*:331)'
+                        .')'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -64,9 +72,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        190 => [[['_route' => 'add_to_cart', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
-        216 => [[['_route' => 'delete_to_cart', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
-        239 => [
+        214 => [[['_route' => 'account_address_edit', '_controller' => 'App\\Controller\\AccountAddressController::edit'], ['id'], null, null, false, true, null]],
+        254 => [[['_route' => 'account_address_delete', '_controller' => 'App\\Controller\\AccountAddressController::delete'], ['id'], null, null, false, true, null]],
+        282 => [[['_route' => 'add_to_cart', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        308 => [[['_route' => 'delete_to_cart', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
+        331 => [
             [['_route' => 'decrease_to_cart', '_controller' => 'App\\Controller\\CartController::decrease'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

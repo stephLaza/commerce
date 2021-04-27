@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes adresses
+{% endblock %}
+
+{% block body %}
+
+	<!-- ======= Panier Section ======= -->
+	<main id="main">
+		<section id="contact" class="contact m100">
+
+
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Adresse</h2>
+					<p>Gérer vos adresses de livraison</p>
+				</div>
+				<div class"container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+					<a href="{{path("account")}}" class="book-a-table-btn scrollto d-none d-lg-flex col-2 text-center my-1">Retour</a>
+					<a href="{{path("add_address")}}" class="book-a-table-btn scrollto d-none d-lg-flex col-2 text-center">Ajouter une adresse</a>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="container Adresse">
+				{% if app.user.addresses|length == 0 %}
+					vous n'avez pas encore ajouté d'adresse. Pour l'ajouter
+					<a href="">Cliquez ici</a>
+				{% else %}
+
+					<div class="row">
+						{% for address in app.user.addresses %}
+							<div class="col-col-md-4 my-3">
+								<div class="card bg-dark" style="width: 18rem;">
+									
+									<div class="card-body">
+										<h5 class="card-title">{{ address.name }}</h5>
+										<p class="card-text">
+										{{ address.address}}<br/>
+										{{ address.postal}} - {{ address.city}} - {{ address.country}}<br/>
+										</p>
+										<a href="{{ path('account_address_edit', {'id' : address.id}) }}"
+										 class="book-a-table-btn scrollto d-none d-lg-flex  text-center my-1">Modifier</a>
+										 <a href="{{ path('account_address_delete', {'id' : address.id}) }}"
+										  class="book-a-table-btn scrollto d-none d-lg-flex  text-center my-1">Supprimer</a>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+
+			</div>
+
+
+		</section>
+		<!-- End Panier Section -->
+
+	</main>
+	<!-- End #main -->
+{% endblock %}
