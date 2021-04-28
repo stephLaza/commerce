@@ -33,6 +33,8 @@ return [
     'evenement' => [[], ['_controller' => 'App\\Controller\\EventController::index'], [], [['text', '/evenements']], [], []],
     'galerie' => [[], ['_controller' => 'App\\Controller\\GalerieController::index'], [], [['text', '/galerie']], [], []],
     'accueil' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+    'order' => [[], ['_controller' => 'App\\Controller\\OrderController::index'], [], [['text', '/commande']], [], []],
+    'order_recap' => [[], ['_controller' => 'App\\Controller\\OrderController::add'], [], [['text', '/commande/recapitulatif']], [], []],
     'produits' => [[], ['_controller' => 'App\\Controller\\ProductController::index'], [], [['text', '/produits']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\RegisterController::register'], [], [['text', '/secu']], [], []],
     'reservation' => [[], ['_controller' => 'App\\Controller\\ReservationController::index'], [], [['text', '/compte/reservation']], [], []],

@@ -27,7 +27,7 @@
 			<div class="container Adresse">
 				{% if app.user.addresses|length == 0 %}
 					vous n'avez pas encore ajouté d'adresse. Pour l'ajouter
-					<a href="">Cliquez ici</a>
+					<a href="{{path("add_address")}}">Cliquez ici</a>
 				{% else %}
 
 					<div class="row">

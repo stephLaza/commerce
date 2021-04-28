@@ -26,6 +26,8 @@ return [
         '/evenements' => [[['_route' => 'evenement', '_controller' => 'App\\Controller\\EventController::index'], null, null, null, false, false, null]],
         '/galerie' => [[['_route' => 'galerie', '_controller' => 'App\\Controller\\GalerieController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/commande' => [[['_route' => 'order', '_controller' => 'App\\Controller\\OrderController::index'], null, null, null, false, false, null]],
+        '/commande/recapitulatif' => [[['_route' => 'order_recap', '_controller' => 'App\\Controller\\OrderController::add'], null, null, null, false, false, null]],
         '/produits' => [[['_route' => 'produits', '_controller' => 'App\\Controller\\ProductController::index'], null, null, null, false, false, null]],
         '/secu' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\RegisterController::register'], null, null, null, false, false, null]],
         '/compte/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\ReservationController::index'], null, null, null, false, false, null]],
