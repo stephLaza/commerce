@@ -406,6 +406,14 @@
         <argument type="service" id=".service_locator.cfm0szH.App\Controller\Admin\DashboardController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="ea.crud_controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.7Gh9pQb.App\Controller\Admin\OrderCrudController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\ProductCrudController" class="App\Controller\Admin\ProductCrudController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="ea.crud_controller"/>
@@ -468,6 +476,7 @@
     <service id="App\Controller\OrderController" class="App\Controller\OrderController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\OrderController"/>
       </call>
@@ -5872,6 +5881,10 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\DashboardControllerInterface.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\ProductCrudController" class="App\Controller\Admin\ProductCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\ProductCrudController" class="App\Controller\Admin\ProductCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\ProductCrudController" class="App\Controller\Admin\ProductCrudController" autowire="true" abstract="true"/>
@@ -6425,7 +6438,7 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.HRBN_.h" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.vovWMkM" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountAddressController::add" type="service" id=".service_locator.4N2tuNN"/>
@@ -6472,6 +6485,26 @@
         <argument key="App\Controller\Admin\CategoryCrudController::renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\CategoryCrudController::updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\DashboardController::configureUserMenu" type="service" id=".service_locator.q6hA_O0"/>
+        <argument key="App\Controller\Admin\OrderCrudController::autocomplete" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::configureActions" type="service" id=".service_locator.CKlWSja"/>
+        <argument key="App\Controller\Admin\OrderCrudController::configureAssets" type="service" id=".service_locator.U4Bbnsn"/>
+        <argument key="App\Controller\Admin\OrderCrudController::configureCrud" type="service" id=".service_locator.4C0Bh8j"/>
+        <argument key="App\Controller\Admin\OrderCrudController::configureFilters" type="service" id=".service_locator.Nt.ogDb"/>
+        <argument key="App\Controller\Admin\OrderCrudController::configureResponseParameters" type="service" id=".service_locator.2dc0eaX"/>
+        <argument key="App\Controller\Admin\OrderCrudController::createEditForm" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController::createEditFormBuilder" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController::createIndexQueryBuilder" type="service" id=".service_locator.rAlqQ78"/>
+        <argument key="App\Controller\Admin\OrderCrudController::createNewForm" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController::createNewFormBuilder" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController::delete" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::deleteEntity" type="service" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\OrderCrudController::detail" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::edit" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::index" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::new" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::persistEntity" type="service" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\OrderCrudController::renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController::updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\ProductCrudController::autocomplete" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\ProductCrudController::configureActions" type="service" id=".service_locator.CKlWSja"/>
         <argument key="App\Controller\Admin\ProductCrudController::configureAssets" type="service" id=".service_locator.U4Bbnsn"/>
@@ -6574,6 +6607,26 @@
         <argument key="App\Controller\Admin\CategoryCrudController:renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\CategoryCrudController:updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\DashboardController:configureUserMenu" type="service" id=".service_locator.q6hA_O0"/>
+        <argument key="App\Controller\Admin\OrderCrudController:autocomplete" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:configureActions" type="service" id=".service_locator.CKlWSja"/>
+        <argument key="App\Controller\Admin\OrderCrudController:configureAssets" type="service" id=".service_locator.U4Bbnsn"/>
+        <argument key="App\Controller\Admin\OrderCrudController:configureCrud" type="service" id=".service_locator.4C0Bh8j"/>
+        <argument key="App\Controller\Admin\OrderCrudController:configureFilters" type="service" id=".service_locator.Nt.ogDb"/>
+        <argument key="App\Controller\Admin\OrderCrudController:configureResponseParameters" type="service" id=".service_locator.2dc0eaX"/>
+        <argument key="App\Controller\Admin\OrderCrudController:createEditForm" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController:createEditFormBuilder" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController:createIndexQueryBuilder" type="service" id=".service_locator.rAlqQ78"/>
+        <argument key="App\Controller\Admin\OrderCrudController:createNewForm" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController:createNewFormBuilder" type="service" id=".service_locator.tbo4Jjv"/>
+        <argument key="App\Controller\Admin\OrderCrudController:delete" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:deleteEntity" type="service" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\OrderCrudController:detail" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:edit" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:index" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:new" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:persistEntity" type="service" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\OrderCrudController:renderFilters" type="service" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\OrderCrudController:updateEntity" type="service" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\ProductCrudController:autocomplete" type="service" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\ProductCrudController:configureActions" type="service" id=".service_locator.CKlWSja"/>
         <argument key="App\Controller\Admin\ProductCrudController:configureAssets" type="service" id=".service_locator.U4Bbnsn"/>
@@ -6932,6 +6985,7 @@
       <argument type="collection">
         <argument>App\Controller\Admin\CarrierCrudController</argument>
         <argument>App\Controller\Admin\CategoryCrudController</argument>
+        <argument>App\Controller\Admin\OrderCrudController</argument>
         <argument>App\Controller\Admin\ProductCrudController</argument>
         <argument>App\Controller\Admin\UserCrudController</argument>
       </argument>
@@ -7059,6 +7113,12 @@
       <argument>App\Controller\Admin\DashboardController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.cfm0szH" method="withContext"/>
+    </service>
+    <service id=".service_locator.7Gh9pQb.App\Controller\Admin\OrderCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\OrderCrudController"/>
+      <argument>App\Controller\Admin\OrderCrudController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.7Gh9pQb" method="withContext"/>
     </service>
     <service id=".service_locator.7Gh9pQb.App\Controller\Admin\ProductCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\ProductCrudController"/>
@@ -7308,12 +7368,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Provider\AdminContextProvider"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.HRBN_.h"/>
+      <argument type="service" id=".service_locator.vovWMkM"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.HRBN_.h"/>
+      <argument type="service" id=".service_locator.vovWMkM"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7749,7 +7809,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.HRBN_.h"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vovWMkM"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.Hllcktv"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>

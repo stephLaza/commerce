@@ -17,39 +17,44 @@
 					<div class="col-md-6">
 						{% set formHtml %}
 						{{ form_start(form, {action:path('order_recap')}) }}
+						{{ form_label(form.addresses, 'Choissez votre adresse de livraison') }}
+						<a href="{{path("add_address")}}">
+							Ajouter une nouvelle adresse</a>
 						{{ form_end(form) }}
-							{% endset %}
+						{% endset %}
 
-							{{ formHtml|replace({'[br]':'<br/>'})|raw }}
+						{{ formHtml|replace({'[br]':'<br/>'})|raw }}
 
-						</div>
-						<div class="col-md-6">
-							<b>Récapitulatif de ma commande</b><br>
-							<div class="order-summary">
+					</div>
+					<div class="col-md-6">
+						<b>Récapitulatif de ma commande</b><br>
+						<div class="order-summary">
 							{% for key,product in cart %}
-								
+
 								<div class="row mt-1 {% if key > 0 %}mt-2{% endif %} ">
 									<div class="col-md-3">
-									<img src="{{asset('uploads/' ~ product.product.image)}}" class="menu-img" alt="{{product.product.name}}">
+										<img src="{{asset('uploads/' ~ product.product.image)}}" class="menu-img" alt="{{product.product.name}}">
 									</div>
 									<div class="col">
-									{{ product.product.name }} <br/>
-									<small>{{ product.product.description }}</small>
+										{{ product.product.name }}
+										<br/>
+										<small>{{ product.product.description }}</small>
 									</div>
 									<div class="col-md-2">
-									X {{ product.quantity }}
+										X
+										{{ product.quantity }}
 									</div>
 								</div>
 							{% endfor %}
-							</div>
-							
-				
 						</div>
+
+
 					</div>
 				</div>
+			</div>
 
 
-			</section>
-			<!-- End Menu Section -->
-		</main>
-	{% endblock %}
+		</section>
+		<!-- End Menu Section -->
+	</main>
+{% endblock %}
